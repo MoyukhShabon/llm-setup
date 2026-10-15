@@ -12,8 +12,7 @@ Based on the benchmarking results, we mostly use either of the following models:
 
 **Conda environment**:
 
-For the models that use SgLang, we can use the existing conda env: "vllm" on GPU02 server.
-Specifically for Qwen3.5-35B-A3B-GPTQ-Int4, the conda environment : "sglang-env" needs to be used.
+For the models that use SgLang, we can use the existing conda env: "sglang-env" on GPU02 server.
 
 ## Running a LLM via SGLang:
 
@@ -45,7 +44,7 @@ For convenience, the script "run_qwen3.5_sglang.sh" can be executed directly.
 The command below uses model - neuralmagic/DeepSeek-R1-Distill-Qwen-32B-quantized.w4a16 as an example.
 
 ```bash
-conda activate vllm
+conda activate vllmsglang-env
 CUDA_VISIBLE_DEVICES=2 python -m sglang.launch_server \
   --model neuralmagic/DeepSeek-R1-Distill-Qwen-32B-quantized.w4a16 \
   --context-length 131072 \
@@ -68,7 +67,7 @@ Default port used: 11434.
 
 The pre-downloaded models on GPU02 can be looked up via:
 ```bash
-curl http://gpu02.sbms.hku.hk:11434/api/tags
+curl http://localhost:11434/api/tags
 ollama ps
 ```
 
@@ -79,7 +78,7 @@ Smoke test for the pre-downloaded Gemma model:
 ```bash
 curl http://localhost:11434/api/chat \
   -H "Content-Type: application/json" \
-  -d '{"model": "hf.co/unsloth/gemma-3-27b-it-GGUF:Q4_K_M", "messages": [{"role": "user", "content": "Hello"}], "stream": false}'
+  -d '{"model": "gemma4:31b", "messages": [{"role": "user", "content": "Hello"}], "stream": false}'
 ```
 
 Only if you need a model that is not pre-downloaded, run:
