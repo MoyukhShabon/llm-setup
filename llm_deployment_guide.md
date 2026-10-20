@@ -60,7 +60,7 @@ Note: For convenience, the script "run_deepseek_sglang.sh" can be executed direc
 ./run_deepseek_sglang.sh
 ```
 For running a new model via SGLang, refer to the instructions on hugging face page or check out [SGLang's cookbook](https://lmsysorg.mintlify.app/cookbook/intro)
-For adjusting server parameterrs for different models, refer to [Server Arguments](https://lmsysorg.mintlify.app/docs/advanced_features/server_arguments)
+For adjusting server parameters for different models, refer to [Server Arguments](https://lmsysorg.mintlify.app/docs/advanced_features/server_arguments)
 
 ## Running a LLM via Ollama
 
@@ -77,7 +77,7 @@ The model(s) currently loaded in memory can be checked with:
 ```bash
 ollama ps
 ```
-The following command can be run on server side to load a model(gemma4:31b foro example) in memory:
+The following command can be run on server side to load a model(gemma4:31b for example) in memory:
 ```bash
 ollama run gemma4:31b
 ```
