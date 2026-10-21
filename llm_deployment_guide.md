@@ -18,8 +18,7 @@ Default port used: 30000.
 
 **Conda environment**:
 
-For the models that use SGLang, we can use the existing conda env: "sglang-env" on GPU02 server.
-This environment runs SGLang version (insert-version) , along with required dependencies.
+For the models that use SGLang, we can use the existing conda env: "sglang-env" on GPU02 server, which contains SGLang version '0.5.6.post2'.
 
 **1. Model: Qwen3.5-35B-A3B-GPTQ-Int4,**
    
