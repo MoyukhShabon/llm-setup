@@ -2,16 +2,6 @@
 
 Runing a LLM on **gpu02** (`gpu02.sbms.hku.hk`):
 
-Some models have been already downloaded using either Ollama or SGLang.
-
-- refer to nct2ctml/config.py for a list of predownloaded models.
-- refer to 'llm_comparison' spreadsheet on google drive (tab: all_llms_library) for the details of llms that were downloaded and tested on GPU02 server.
-- The spreadsheet also mentions which models were tried and tested on which platform (SGLang/ Ollama), and how much memory would they approximately consume.
-
-Based on the benchmarking results, we mostly use either of the following models:
-- neuralmagic/DeepSeek-R1-Distill-Qwen-32B-quantized.w4a16
-- gemma4:31b
-
 ## Running a LLM via SGLang:
 
 Default port used: 30000.
@@ -96,6 +86,15 @@ Only if you need a model that is not pre-downloaded, run:
 ```bash
 ollama pull <model>
 ```
+
+**Notes**:
+- Refer to nct2ctml/config.py for a list of predownloaded models.
+- Refer to 'llm_comparison' spreadsheet on google drive (tab: all_llms_library) for the details of llms that were downloaded and tested on GPU02 server.
+- The spreadsheet also mentions which models were tried and tested on which platform (SGLang/ Ollama), and how much memory would they approximately consume.
+
+Based on the benchmarking results, we mostly use either of the following models:
+- neuralmagic/DeepSeek-R1-Distill-Qwen-32B-quantized.w4a16
+- gemma4:31b
 
 
 **Client-side configuration**:
